@@ -29,6 +29,7 @@ ext {
     micrometerVersion = '1.13.1'
     springBootStarterWsVersion = '3.3.1'
     findbugsVersion = 'jsr305:3.0.2'
+    classGraphVersion = '4.8.157'
 }
 
 dependencies {
@@ -50,7 +51,7 @@ dependencies {
     implementation "io.micrometer:micrometer-core:${micrometerVersion}"
 
     // ClassGraph
-    implementation 'io.github.classgraph:classgraph:4.8.157'
+    implementation "io.github.classgraph:classgraph:${classGraphVersion}"
 
     // Test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
