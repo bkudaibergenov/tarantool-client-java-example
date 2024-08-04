@@ -14,10 +14,10 @@ import org.springframework.test.web.servlet.MockMvc;
 import tarantool.client.example.builder.ProductBuilder;
 import tarantool.client.example.dto.ProductCreateRequestDto;
 import tarantool.client.example.dto.ProductDto;
-import tarantool.client.example.exception.TarantoolClientException;
-import tarantool.client.example.exception.TarantoolRecordNotFoundException;
 import tarantool.client.example.model.Product;
 import tarantool.client.example.service.ProductService;
+import tarantool.client.example.tarantool.exception.TarantoolClientException;
+import tarantool.client.example.tarantool.exception.TarantoolRecordNotFoundException;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;

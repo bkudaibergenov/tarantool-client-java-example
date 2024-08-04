@@ -8,12 +8,22 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import tarantool.client.example.tarantool.properties.TarantoolProperties;
 
+/**
+ * Configuration class for setting up the Tarantool CRUD client.
+ */
 @Configuration
 @RequiredArgsConstructor
 public class TarantoolClientConfig {
 
     private final TarantoolProperties tarantoolProperties;
 
+    /**
+     * Creates and configures a {@link TarantoolCrudClient} bean using the properties defined in
+     * {@link TarantoolProperties}.
+     *
+     * @return a configured instance of {@link TarantoolCrudClient}.
+     * @throws Exception if there is an error during the client creation.
+     */
     @Bean
     public TarantoolCrudClient tarantoolCrudClient() throws Exception {
         return TarantoolFactory.crud()

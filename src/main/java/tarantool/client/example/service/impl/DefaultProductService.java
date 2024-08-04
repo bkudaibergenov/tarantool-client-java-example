@@ -6,10 +6,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
-import tarantool.client.example.exception.TarantoolClientException;
-import tarantool.client.example.exception.TarantoolRecordNotFoundException;
 import tarantool.client.example.model.Product;
 import tarantool.client.example.service.ProductService;
+import tarantool.client.example.tarantool.exception.TarantoolClientException;
+import tarantool.client.example.tarantool.exception.TarantoolRecordNotFoundException;
 import tarantool.client.example.tarantool.service.TarantoolCrudService;
 
 import java.util.ArrayList;

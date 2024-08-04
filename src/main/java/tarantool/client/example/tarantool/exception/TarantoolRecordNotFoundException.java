@@ -1,4 +1,4 @@
-package tarantool.client.example.exception;
+package tarantool.client.example.tarantool.exception;
 
 import lombok.Getter;
 import org.springframework.lang.NonNull;

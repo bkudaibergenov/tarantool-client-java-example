@@ -10,10 +10,18 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+/**
+ * Utility class for scanning and retrieving the names of all Tarantool spaces annotated with {@link TarantoolSpace}.
+ */
 @Slf4j
 @UtilityClass
 public class TarantoolSpaceScanner {
 
+    /**
+     * Scans the classpath for classes annotated with {@link TarantoolSpace} and retrieves their space names.
+     *
+     * @return a set of names of Tarantool spaces.
+     */
     public Set<String> getTarantoolSpaces() {
         Set<String> tarantoolSpaceNames = new HashSet<>();
 
