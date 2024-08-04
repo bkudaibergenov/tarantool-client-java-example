@@ -12,6 +12,14 @@ import tarantool.client.example.tarantool.annotation.TarantoolSpace;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 
+/**
+ * Represents a product entity stored in the Tarantool database.
+ * Annotated with {@link TarantoolSpace} to specify the Tarantool space name.
+ * <p>
+ * Note: The {@link JsonProperty} annotations are necessary to ensure that
+ * the entity correctly maps to the Tarantool space when using Lombok for
+ * automatic generation of getters and setters.
+ */
 @JsonFormat(shape = JsonFormat.Shape.ARRAY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
