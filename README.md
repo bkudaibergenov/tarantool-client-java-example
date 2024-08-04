@@ -67,3 +67,7 @@ The service exposes a set of RESTful endpoints to manage products.
 To run the unit tests, use:
 ```sh
 ./gradlew test
+
+## Contact
+
+For any questions or inquiries, you can reach me at [bkudaibergenov@gmail.com](mailto:bkudaibergenov@gmail.com).
