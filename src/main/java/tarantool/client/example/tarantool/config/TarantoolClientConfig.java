@@ -10,6 +10,8 @@ import tarantool.client.example.tarantool.properties.TarantoolProperties;
 
 /**
  * Configuration class for setting up the Tarantool CRUD client.
+ * <p>
+ * @author Bekzhan Kudaibergenov
  */
 @Configuration
 @RequiredArgsConstructor
@@ -23,6 +25,8 @@ public class TarantoolClientConfig {
      *
      * @return a configured instance of {@link TarantoolCrudClient}.
      * @throws Exception if there is an error during the client creation.
+     *
+     * @author Bekzhan Kudaibergenov
      */
     @Bean
     public TarantoolCrudClient tarantoolCrudClient() throws Exception {

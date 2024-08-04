@@ -10,6 +10,8 @@ import java.util.List;
 
 /**
  * Service interface for managing products in the Tarantool database.
+ * <p>
+ * @author Bekzhan Kudaibergenov
  */
 public interface ProductService {
 

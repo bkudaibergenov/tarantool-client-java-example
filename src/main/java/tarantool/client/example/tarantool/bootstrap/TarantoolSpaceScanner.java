@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 /**
  * Scans all classes annotated with {@link tarantool.client.example.tarantool.annotation.TarantoolSpace}
  * and performs a test count query to ensure the space is created in the Tarantool database.
+ * <p>
+ * @author Bekzhan Kudaibergenov
  */
 @Component
 @RequiredArgsConstructor

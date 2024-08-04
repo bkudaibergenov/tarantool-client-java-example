@@ -12,6 +12,8 @@ import java.util.Set;
 
 /**
  * Utility class for scanning and retrieving the names of all Tarantool spaces annotated with {@link TarantoolSpace}.
+ * <p>
+ * @author Bekzhan Kudaibergenov
  */
 @Slf4j
 @UtilityClass

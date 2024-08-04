@@ -9,6 +9,8 @@ import java.util.Optional;
 
 /**
  * Service interface for CRUD operations on Tarantool spaces.
+ * <p>
+ * @author Bekzhan Kudaibergenov
  */
 public interface TarantoolCrudService {
 

@@ -19,6 +19,8 @@ import java.time.ZonedDateTime;
  * Note: The {@link JsonProperty} annotations are necessary to ensure that
  * the entity correctly maps to the Tarantool space when using Lombok for
  * automatic generation of getters and setters.
+ * <p>
+ * @author Bekzhan Kudaibergenov
  */
 @JsonFormat(shape = JsonFormat.Shape.ARRAY)
 @JsonIgnoreProperties(ignoreUnknown = true)
