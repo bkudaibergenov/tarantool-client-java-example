@@ -1,0 +1,63 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.1'
+    id 'io.spring.dependency-management' version '1.1.5'
+}
+
+group = 'tarantool.client.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+ext {
+    tarantoolClientVersion = '1.1.0'
+    micrometerVersion = '1.13.1'
+    springBootStarterWsVersion = '3.3.1'
+    findbugsVersion = 'jsr305:3.0.2'
+}
+
+dependencies {
+    // Spring
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // google code findbugs
+    implementation "com.google.code.findbugs:${findbugsVersion}"
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // Tarantool
+    implementation "io.tarantool:tarantool-client:${tarantoolClientVersion}"
+
+    // Micrometer
+    implementation "io.micrometer:micrometer-core:${micrometerVersion}"
+
+    // ClassGraph
+    implementation 'io.github.classgraph:classgraph:4.8.157'
+
+    // Test
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.ws:spring-ws-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+

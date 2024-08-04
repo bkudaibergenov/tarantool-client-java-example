@@ -1,0 +1,6 @@
+tarantooldb:
+  user: admin
+  password: secret-cluster-cookie
+  nodes:
+    - port: 3301
+      tag: my.router
