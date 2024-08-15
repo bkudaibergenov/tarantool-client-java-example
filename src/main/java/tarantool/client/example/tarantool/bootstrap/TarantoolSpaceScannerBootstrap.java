@@ -4,6 +4,7 @@ import io.tarantool.client.crud.TarantoolCrudClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import tarantool.client.example.tarantool.util.TarantoolSpaceScanner;
 
 /**
  * Scans all classes annotated with {@link tarantool.client.example.tarantool.annotation.TarantoolSpace}
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @RequiredArgsConstructor
-public class TarantoolSpaceScanner implements CommandLineRunner {
+public class TarantoolSpaceScannerBootstrap implements CommandLineRunner {
 
     private final TarantoolCrudClient tarantoolCrudClient;
 
@@ -24,7 +25,7 @@ public class TarantoolSpaceScanner implements CommandLineRunner {
      */
     @Override
     public void run(String... args) {
-        tarantool.client.example.tarantool.util.TarantoolSpaceScanner.getTarantoolSpaces()
+        TarantoolSpaceScanner.getTarantoolSpaces()
                 .forEach(space -> tarantoolCrudClient.space(space).count().join());
     }
 }
