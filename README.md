@@ -1,6 +1,6 @@
 # Tarantool Client Java Example
 
-This project is an example service for working with the Tarantool database using the `tarantool-client` library in a Java Spring application. The service demonstrates basic CRUD operations and pagination with Tarantool.
+This project is an example service for working with the Tarantool database using the tarantool-client library in a Java Spring application. The service demonstrates basic CRUD operations and pagination with Tarantool. Note that the tarantool-client library is a commercial product provided with Tarantool Enterprise.
 
 ## Project Structure
 
